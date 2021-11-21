@@ -118,15 +118,184 @@ body {
   align-items: center;
 }
 
-.btn__tertiary {
-  padding: 0.6rem 3rem;
+.movie {
+  margin-top: 15rem;
+}
+.movie__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.movie__title p {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+}
+.movie__title p::before, .movie__title p::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.movie__title span {
+  display: flex;
+}
+.movie__title span svg {
+  border: 1px solid white;
+  background-color: #707070;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.movie__title span svg:first-child {
+  margin-right: 1rem;
+}
+.movie .movie-items--1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.movie .movie-items--1 figure {
+  text-align: center;
+  transition: transform 0.3s;
+}
+.movie .movie-items--1 figure:hover {
+  transform: scale(1.1);
+}
+.movie .movie-items--1 figure figcaption {
+  font-size: 1.6rem;
+  color: white;
+}
+.movie .movie-items--2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.movie .movie-items--2 figure {
+  text-align: center;
+  transition: transform 0.3s;
+}
+.movie .movie-items--2 figure:hover {
+  transform: scale(1.1);
+}
+.movie .movie-items--2 figure figcaption {
+  font-size: 1.6rem;
+  color: white;
+}
+.movie .movie-items--2 figure figcaption:last-child {
+  color: #707070;
+  font-size: 1.2rem;
+}
+
+.comments {
+  margin-top: 15rem;
+  padding-bottom: 15rem;
+}
+.comments-row {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-column-gap: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+.comments .text {
+  width: 100%;
+}
+.comments .text textarea {
+  resize: none;
+  width: 100%;
+  height: 25rem;
+  background-color: rgba(112, 112, 112, 0.8);
   border: none;
   border-radius: 7px;
-  background-color: rgba(112, 112, 112, 0.4);
-  transition: all 0.2s;
+  padding: 2rem;
+  color: white;
 }
-.btn__tertiary:hover {
+.comments .text textarea::-webkit-input-placeholder {
+  color: white;
+}
+.comments .text textarea:focus {
+  outline: none;
+}
+.comments .text p {
+  font-size: 2.6rem;
+  margin-top: -5rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+}
+.comments .text a {
+  margin-top: 1rem;
+}
+.comments__items {
+  width: 100%;
+}
+.comments__items .comment {
   background-color: rgba(112, 112, 112, 0.8);
+  border-radius: 7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.comments__items .comment:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.comments__items .comment .col-left {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+}
+.comments__items .comment .col-left figure {
+  width: 4.5rem;
+  height: 4.5rem;
+  grid-row: 1/span 2;
+  transform: translateY(-1.3rem);
+}
+.comments__items .comment .col-left h5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+.comments__items .comment .col-right {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+}
+.comments__items .comment .col-right figure {
+  grid-row: 1/span 2;
+}
+.comments__items .comment .col-right .rate {
+  color: #FCC537;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.comments__items .comment .col-right .date {
+  color: white;
+  font-size: 1.2rem;
+}
+.comments__items .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comments__items .more p {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.comments__items .more svg {
+  cursor: pointer;
+  display: flex;
 }
 
 .header {
@@ -166,7 +335,7 @@ body {
   height: 2rem;
 }
 .header__body--content .genre a:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.7rem;
 }
 .header .row-2 {
   margin-top: 3rem;
@@ -212,6 +381,21 @@ body {
   display: flex;
 }
 
+.about-title, .comments-title {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.about-title::before, .comments-title::before, .about-title::after, .comments-title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+
 .gradiant img {
   width: 100%;
   margin-top: -15rem;
@@ -223,20 +407,6 @@ body {
   width: 100%;
 }
 
-.about-title {
-  width: 30rem;
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  grid-column-gap: 1.5rem;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-.about-title::before, .about-title::after {
-  content: "";
-  height: 1px;
-  display: block;
-  background-color: currentColor;
-}
 .about__content {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -260,62 +430,14 @@ body {
   color: #bcbcbc;
 }
 
-.episode {
-  margin-top: 15rem;
-}
-.episode__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 4rem;
-}
-.episode__title p {
-  width: 30rem;
-  display: grid;
-  grid-template-columns: 1fr max-content 1fr;
-  grid-column-gap: 1.5rem;
-  align-items: center;
-}
-.episode__title p::before, .episode__title p::after {
-  content: "";
-  height: 1px;
-  display: block;
-  background-color: currentColor;
-}
-.episode__title span {
-  display: flex;
-}
-.episode__title span svg {
-  border: 1px solid white;
-  background-color: #707070;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.episode__title span svg:first-child {
-  margin-right: 1rem;
-}
-.episode__content {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 2rem;
-  align-items: center;
-  justify-items: center;
-}
-.episode__content .season {
+.episode .season {
   text-align: center;
 }
-.episode__content .season p:first-child {
+.episode .season p:first-child {
   border: 2px solid white;
   padding: 1rem 0.5rem;
   border-radius: 6px;
   margin-bottom: 1rem;
-}
-.episode__content figure {
-  text-align: center;
-}
-.episode__content figure figcaption {
-  font-size: 1.6rem;
-  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

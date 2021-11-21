@@ -1,3 +1,20 @@
+%title {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: currentColor;
+  }
+}
+
 .gradiant {
   img {
     width: 100%;
@@ -13,20 +30,7 @@
 // ABOUT
 .about {
   &-title {
-    width: 30rem;
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 4rem;
-
-    &::before,
-    &::after {
-      content: "";
-      height: 1px;
-      display: block;
-      background-color: currentColor;
-    }
+    @extend %title;
   }
 
   &__content {
@@ -61,69 +65,14 @@
 
 // EPISODE
 .episode {
-  margin-top: 15rem;
+  .season {
+    text-align: center;
 
-  &__title {
-    @include flexCenter;
-    padding-bottom: 4rem;
-
-    p {
-      width: 30rem;
-      display: grid;
-      grid-template-columns: 1fr max-content 1fr;
-      grid-column-gap: 1.5rem;
-      align-items: center;
-
-      &::before,
-      &::after {
-        content: "";
-        height: 1px;
-        display: block;
-        background-color: currentColor;
-      }
-    }
-
-    span {
-      display: flex;
-
-      svg {
-        border: 1px solid white;
-        background-color: $color-secondary;
-        border-radius: 50%;
-        cursor: pointer;
-
-        &:first-child {
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-
-  &__content {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 2rem;
-    align-items: center;
-    justify-items: center;
-
-    .season {
-      text-align: center;
-
-      p:first-child {
-        border: 2px solid white;
-        padding: 1rem 0.5rem;
-        border-radius: 6px;
-        margin-bottom: 1rem;
-      }
-    }
-
-    figure {
-        text-align: center;
-
-        figcaption {
-            font-size: 1.6rem;
-            color: white;
-        }
+    p:first-child {
+      border: 2px solid white;
+      padding: 1rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
     }
   }
 }

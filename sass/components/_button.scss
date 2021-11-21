@@ -35,15 +35,3 @@
     align-items: center;
   }
 }
-
-.btn__tertiary {
-  padding: 0.6rem 3rem;
-  border: none;
-  border-radius: 7px;
-  background-color: rgba($color-secondary, 0.4);
-  transition: all 0.2s;
-
-  &:hover {
-    background-color: rgba($color-secondary, 0.8);
-  }
-}

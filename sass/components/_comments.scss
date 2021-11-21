@@ -1,0 +1,123 @@
+.comments {
+  margin-top: 15rem;
+  padding-bottom: 15rem;
+  &-title {
+    @extend %title;
+  }
+
+  &-row {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-column-gap: 2rem;
+    justify-items: center;
+    align-items: start;
+  }
+
+  .text {
+    width: 100%;
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 25rem;
+      background-color: rgba($color-secondary, 0.8);
+      border: none;
+      border-radius: 7px;
+      padding: 2rem;
+      color: white;
+
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    p {
+      font-size: 2.6rem;
+      margin-top: -5rem;
+      margin-left: 0.7rem;
+      cursor: pointer;
+    }
+
+    a {
+      margin-top: 1rem;
+    }
+  }
+
+  &__items {
+    width: 100%;
+    .comment {
+      background-color: rgba($color-secondary, 0.8);
+      border-radius: 7px;
+      width: 100%;
+      @include flexCenter;
+      padding: 3rem 2rem 2rem 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      .col-left {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 2.5rem;
+
+        figure {
+          width: 4.5rem;
+          height: 4.5rem;
+          grid-row: 1 / span 2;
+          transform: translateY(-1.3rem);
+        }
+
+        h5 {
+          color: rgba(white, 0.8);
+          font-size: 1.4rem;
+          font-weight: lighter;
+        }
+      }
+
+      .col-right {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-row-gap: 0.5rem;
+        grid-column-gap: 2.5rem;
+        justify-items: center;
+        align-items: center;
+
+        figure {
+          grid-row: 1 / span 2;
+        }
+
+        .rate {
+          color: $color-primary;
+          font-size: 2.5rem;
+          font-weight: bold;
+        }
+
+        .date {
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+
+      svg {
+        cursor: pointer;
+        display: flex;
+      }
+    }
+  }
+}

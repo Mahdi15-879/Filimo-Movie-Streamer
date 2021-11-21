@@ -1,0 +1,90 @@
+.movie {
+  margin-top: 15rem;
+
+  &__title {
+    @include flexCenter;
+    padding-bottom: 4rem;
+
+    p {
+      width: 30rem;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-column-gap: 1.5rem;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: currentColor;
+      }
+    }
+
+    span {
+      display: flex;
+
+      svg {
+        border: 1px solid white;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .movie-items {
+    &--1 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-gap: 2rem;
+      align-items: center;
+      justify-items: center;
+
+      figure {
+        text-align: center;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        figcaption {
+          font-size: 1.6rem;
+          color: white;
+        }
+      }
+    }
+
+    &--2 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 2rem;
+      align-items: center;
+      justify-items: center;
+
+      figure {
+        text-align: center;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        figcaption {
+          font-size: 1.6rem;
+          color: white;
+
+          &:last-child {
+            color: $color-secondary;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
