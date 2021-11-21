@@ -1,0 +1,32 @@
+.nav {
+    position:relative;
+	z-index:2;
+    padding: 1.5rem 4.5rem;
+    @include flexCenter;
+
+    &__list {
+        @include flexCenter;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4.5rem;
+        }
+    }
+
+    &__link {
+        @include linkHover;
+    }
+
+    .prof {
+        @include flexCenter;
+        
+        & > * {
+            cursor: pointer;
+        }
+
+        &-photo {
+            display: flex;
+        }
+    }
+}
