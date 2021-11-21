@@ -76,12 +76,11 @@ body {
   bottom: 0;
   background: url("../img/unnamed.png") no-repeat center center/cover;
   z-index: -10;
-  -webkit-filter: blur(20px) brightness(60%);
-  -moz-filter: blur(20px) brightness(60%);
-  -o-filter: blur(20px) brightness(60%);
-  -ms-filter: blur(20px) brightness(60%);
-  filter: blur(20px) brightness(60%);
-  width: 100vw;
+  -webkit-filter: blur(20px) brightness(50%);
+  -moz-filter: blur(20px) brightness(50%);
+  -o-filter: blur(20px) brightness(50%);
+  -ms-filter: blur(20px) brightness(50%);
+  filter: blur(20px) brightness(50%);
   height: 100vh;
 }
 
@@ -211,6 +210,112 @@ body {
 }
 .nav .prof-photo {
   display: flex;
+}
+
+.gradiant img {
+  width: 100%;
+  margin-top: -15rem;
+}
+
+.main {
+  background-image: linear-gradient(to bottom, #0b0e1e, #47402f);
+  margin-top: -1rem;
+  width: 100%;
+}
+
+.about-title {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.about-title::before, .about-title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.about__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+.about__banner {
+  filter: brightness(90%);
+}
+.about__text > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.about__text-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  grid-column-gap: 2rem;
+}
+.about__text-row span {
+  font-size: 1.6rem;
+  color: #bcbcbc;
+}
+
+.episode {
+  margin-top: 15rem;
+}
+.episode__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.episode__title p {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+}
+.episode__title p::before, .episode__title p::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.episode__title span {
+  display: flex;
+}
+.episode__title span svg {
+  border: 1px solid white;
+  background-color: #707070;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.episode__title span svg:first-child {
+  margin-right: 1rem;
+}
+.episode__content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.episode__content .season {
+  text-align: center;
+}
+.episode__content .season p:first-child {
+  border: 2px solid white;
+  padding: 1rem 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.episode__content figure {
+  text-align: center;
+}
+.episode__content figure figcaption {
+  font-size: 1.6rem;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
