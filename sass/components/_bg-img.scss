@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   background: url("../img/unnamed.png") no-repeat center center / cover;
-  z-index: 1;
+  z-index: -10;
   -webkit-filter: blur(20px) brightness(60%);
   -moz-filter: blur(20px) brightness(60%);
   -o-filter: blur(20px) brightness(60%);

@@ -1,32 +1,35 @@
 .nav {
-    position:relative;
-	z-index:2;
-    padding: 1.5rem 4.5rem;
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 4.5rem;
+  @include flexCenter;
+
+  &__list {
+    @include flexCenter;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4.5rem;
+    }
+  }
+
+  &__link {
+    transition: all 0.2s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .prof {
     @include flexCenter;
 
-    &__list {
-        @include flexCenter;
+    & > * {
+      cursor: pointer;
     }
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 4.5rem;
-        }
+    &-photo {
+      display: flex;
     }
-
-    &__link {
-        @include linkHover;
-    }
-
-    .prof {
-        @include flexCenter;
-        
-        & > * {
-            cursor: pointer;
-        }
-
-        &-photo {
-            display: flex;
-        }
-    }
+  }
 }

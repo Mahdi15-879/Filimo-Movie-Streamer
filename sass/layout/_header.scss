@@ -1,3 +1,66 @@
 .header {
   position: relative;
+
+  .row-1 {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 5rem;
+    justify-items: center;
+    align-items: end;
+
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $color-secondary;
+  }
+
+  &__body--banner {
+    img {
+      height: 40rem;
+    }
+  }
+
+  &__body--content {
+    & > *:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-right: 2.5rem;
+      }
+
+      p {
+        font-size: 4rem;
+        color: #fff;
+      }
+
+      &-stars {
+        display: flex;
+
+        img {
+          height: 2rem;
+        }
+      }
+    }
+
+    .genre {
+      a:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .row-2 {
+    margin-top: 3rem;
+    @include flexCenter;
+
+    .left {
+      & > *:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
 }

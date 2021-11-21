@@ -32,6 +32,17 @@ body {
   line-height: 1.7;
 }
 
+.heading-1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
 .mr-sm {
   margin-right: 1.5rem;
 }
@@ -48,6 +59,15 @@ body {
   margin-right: 4.5rem;
 }
 
+.py-sm {
+  padding: 0.5rem 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 .background-image {
   position: absolute;
   left: 0;
@@ -55,7 +75,7 @@ body {
   top: 0;
   bottom: 0;
   background: url("../img/unnamed.png") no-repeat center center/cover;
-  z-index: 1;
+  z-index: -10;
   -webkit-filter: blur(20px) brightness(60%);
   -moz-filter: blur(20px) brightness(60%);
   -o-filter: blur(20px) brightness(60%);
@@ -65,8 +85,98 @@ body {
   height: 100vh;
 }
 
+.btn__primary {
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #FCC537;
+  transition: all 0.2s;
+}
+.btn__primary:hover {
+  background-color: rgba(252, 197, 55, 0.8);
+}
+.btn__primary span {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+}
+
+.btn__secondary {
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(112, 112, 112, 0.4);
+  transition: all 0.2s;
+}
+.btn__secondary:hover {
+  background-color: rgba(112, 112, 112, 0.8);
+}
+.btn__secondary span {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1rem;
+  align-items: center;
+}
+
+.btn__tertiary {
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(112, 112, 112, 0.4);
+  transition: all 0.2s;
+}
+.btn__tertiary:hover {
+  background-color: rgba(112, 112, 112, 0.8);
+}
+
 .header {
   position: relative;
+}
+.header .row-1 {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 5rem;
+  justify-items: center;
+  align-items: end;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #707070;
+}
+.header__body--banner img {
+  height: 40rem;
+}
+.header__body--content > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.header__body--content .rating {
+  display: flex;
+  align-items: center;
+}
+.header__body--content .rating > *:not(:last-child) {
+  margin-right: 2.5rem;
+}
+.header__body--content .rating p {
+  font-size: 4rem;
+  color: #fff;
+}
+.header__body--content .rating-stars {
+  display: flex;
+}
+.header__body--content .rating-stars img {
+  height: 2rem;
+}
+.header__body--content .genre a:not(:last-child) {
+  margin-right: 1rem;
+}
+.header .row-2 {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .row-2 .left > *:not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 .nav {
@@ -89,7 +199,6 @@ body {
   transition: all 0.2s;
 }
 .nav__link:hover {
-  transform: scale(1.2);
   color: #FCC537;
 }
 .nav .prof {
