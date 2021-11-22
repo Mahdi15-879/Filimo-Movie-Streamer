@@ -21,9 +21,14 @@ li {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #ffffff;
+  color: #fff;
   font-size: 1.6rem;
   font-weight: lighter;
+}
+
+::selection {
+  background-color: #FCC537;
+  color: #fff;
 }
 
 body {
@@ -33,13 +38,13 @@ body {
 }
 
 .heading-1 {
-  color: white;
+  color: #fff;
   font-size: 4rem;
   font-weight: lighter;
 }
 
 .paragraph {
-  color: #ffffff;
+  color: #fff;
   font-size: 1.6rem;
 }
 
@@ -144,7 +149,7 @@ body {
   display: flex;
 }
 .movie__title span svg {
-  border: 1px solid white;
+  border: 1px solid #fff;
   background-color: #707070;
   border-radius: 50%;
   cursor: pointer;
@@ -168,7 +173,7 @@ body {
 }
 .movie .movie-items--1 figure figcaption {
   font-size: 1.6rem;
-  color: white;
+  color: #fff;
 }
 .movie .movie-items--2 {
   display: grid;
@@ -186,7 +191,7 @@ body {
 }
 .movie .movie-items--2 figure figcaption {
   font-size: 1.6rem;
-  color: white;
+  color: #fff;
 }
 .movie .movie-items--2 figure figcaption:last-child {
   color: #707070;
@@ -195,7 +200,7 @@ body {
 
 .comments {
   margin-top: 15rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
 }
 .comments-row {
   display: grid;
@@ -215,10 +220,12 @@ body {
   border: none;
   border-radius: 7px;
   padding: 2rem;
-  color: white;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .comments .text textarea::-webkit-input-placeholder {
-  color: white;
+  color: #fff;
+  font-family: inherit;
 }
 .comments .text textarea:focus {
   outline: none;
@@ -281,7 +288,7 @@ body {
   font-weight: bold;
 }
 .comments__items .comment .col-right .date {
-  color: white;
+  color: #fff;
   font-size: 1.2rem;
 }
 .comments__items .more {
@@ -289,9 +296,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-.comments__items .more p {
+.comments__items .more a {
   margin-right: 0.5rem;
-  cursor: pointer;
+  transition: all 0.2s;
+}
+.comments__items .more a:hover {
+  color: #FCC537;
 }
 .comments__items .more svg {
   cursor: pointer;
@@ -345,6 +355,61 @@ body {
 }
 .header .row-2 .left > *:not(:last-child) {
   margin-right: 1.5rem;
+}
+
+.footer {
+  background-color: rgba(71, 64, 47, 0.8);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: start;
+  padding: 5rem 0;
+  border-bottom: 1px solid #707070;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.footer__content > *:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+.footer__link {
+  transition: all 0.3s;
+}
+.footer__link:hover {
+  color: #FCC537;
+  transform: scale(1.1);
+}
+.footer__icon {
+  display: flex;
+  align-items: center;
+}
+.footer__icon i {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #707070;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.footer__icon i:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__icon i:hover {
+  color: #FCC537;
+  border: 1px solid #FCC537;
+  transform: scale(1.1);
+}
+.footer__copyright {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .nav {
@@ -434,7 +499,7 @@ body {
   text-align: center;
 }
 .episode .season p:first-child {
-  border: 2px solid white;
+  border: 2px solid #fff;
   padding: 1rem 0.5rem;
   border-radius: 6px;
   margin-bottom: 1rem;

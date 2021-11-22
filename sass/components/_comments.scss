@@ -1,6 +1,6 @@
 .comments {
   margin-top: 15rem;
-  padding-bottom: 15rem;
+  padding-bottom: 10rem;
   &-title {
     @extend %title;
   }
@@ -23,10 +23,12 @@
       border: none;
       border-radius: 7px;
       padding: 2rem;
-      color: white;
+      color: $color-white;
+      font-family: Arial, Helvetica, sans-serif;
 
       &::-webkit-input-placeholder {
-        color: white;
+        color: $color-white;
+        font-family: inherit;
       }
 
       &:focus {
@@ -73,7 +75,7 @@
         }
 
         h5 {
-          color: rgba(white, 0.8);
+          color: rgba($color-white, 0.8);
           font-size: 1.4rem;
           font-weight: lighter;
         }
@@ -98,7 +100,7 @@
         }
 
         .date {
-          color: white;
+          color: $color-white;
           font-size: 1.2rem;
         }
       }
@@ -109,9 +111,13 @@
       align-items: center;
       justify-content: center;
 
-      p {
+      a {
         margin-right: 0.5rem;
-        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          color: $color-primary;
+        }
       }
 
       svg {

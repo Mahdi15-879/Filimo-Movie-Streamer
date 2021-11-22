@@ -25,7 +25,7 @@
       display: flex;
 
       svg {
-        border: 1px solid white;
+        border: 1px solid $color-white;
         background-color: $color-secondary;
         border-radius: 50%;
         cursor: pointer;
@@ -55,7 +55,7 @@
 
         figcaption {
           font-size: 1.6rem;
-          color: white;
+          color: $color-white;
         }
       }
     }
@@ -77,7 +77,7 @@
 
         figcaption {
           font-size: 1.6rem;
-          color: white;
+          color: $color-white;
 
           &:last-child {
             color: $color-secondary;

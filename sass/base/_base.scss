@@ -22,7 +22,12 @@ li {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #ffffff;
+  color: $color-white;
   font-size: 1.6rem;
   font-weight: lighter;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
