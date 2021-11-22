@@ -5,6 +5,20 @@
     @extend %title;
   }
 
+  @include respond(tab-port) {
+    &-row {
+      grid-template-columns: 1fr !important;
+    }
+
+    .text {
+      margin-bottom: 3rem;
+    }
+
+    .col-left {
+      margin-right: 2rem;
+    }
+  }
+
   &-row {
     display: grid;
     grid-template-columns: 35% 1fr;
@@ -37,8 +51,8 @@
     }
 
     p {
-      font-size: 2.6rem;
-      margin-top: -5rem;
+      font-size: 2rem;
+      margin-top: -4rem;
       margin-left: 0.7rem;
       cursor: pointer;
     }

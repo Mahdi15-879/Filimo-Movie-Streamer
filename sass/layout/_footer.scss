@@ -4,7 +4,7 @@
   &__row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 3.5rem;
     align-items: start;
 
     padding: 5rem 0;
@@ -33,6 +33,7 @@
   &__icon {
     display: flex;
     align-items: center;
+
     i {
       color: rgba($color-white, 0.9);
       background-color: $color-secondary;
@@ -47,7 +48,7 @@
       justify-content: center;
       align-items: center;
 
-      transition: all .2s;
+      transition: all 0.2s;
 
       &:not(:last-child) {
         margin-right: 1rem;
@@ -57,6 +58,12 @@
         color: $color-primary;
         border: 1px solid $color-primary;
         transform: scale(1.1);
+      }
+
+      &:last-child {
+        @include respond(phone) {
+          display: none;
+        }
       }
     }
   }

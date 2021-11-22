@@ -1,6 +1,12 @@
 .movie {
   margin-top: 15rem;
 
+  @include respond(phone) {
+    &__title p {
+      width: 20rem !important;
+    }
+  }
+
   &__title {
     @include flexCenter;
     padding-bottom: 4rem;
@@ -37,17 +43,21 @@
     }
   }
 
-  .movie-items {
+  &-items {
     &--1 {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-gap: 3rem;
       align-items: center;
       justify-items: center;
 
       figure {
         text-align: center;
         transition: transform 0.3s;
+
+        img {
+          width: 100%;
+        }
 
         &:hover {
           transform: scale(1.1);
@@ -62,14 +72,18 @@
 
     &--2 {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-gap: 3rem;
       align-items: center;
       justify-items: center;
 
       figure {
         text-align: center;
         transition: transform 0.3s;
+
+        img {
+          width: 100%;
+        }
 
         &:hover {
           transform: scale(1.1);

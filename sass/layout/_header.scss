@@ -1,6 +1,50 @@
 .header {
   position: relative;
 
+  @include respond(tab-port) {
+    .row-1 {
+      grid-template-columns: 1fr !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    &__body--banner {
+      display: none;
+    }
+
+    .row-2 {
+      flex-direction: column;
+      .left {
+        width: 100%;
+        a {
+          background-color: $color-secondary;
+        }
+      }
+
+      .right {
+        width: 100%;
+        margin-top: 2rem;
+        a {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    .row-2 {
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        & > *:not(:first-child) {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
   .row-1 {
     margin-top: 2.5rem;
     display: grid;
@@ -47,8 +91,12 @@
     }
 
     .genre {
-      a:not(:last-child) {
-        margin-right: 0.7rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-gap: 2rem;
+
+      a {
+        justify-self: center;
       }
     }
   }

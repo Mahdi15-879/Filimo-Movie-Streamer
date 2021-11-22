@@ -29,6 +29,24 @@
 
 // ABOUT
 .about {
+  padding-top: 10rem;
+
+  @include respond(tab-port) {
+    &__content {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+    }
+
+    &__banner {
+      margin-bottom: 3rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   &-title {
     @extend %title;
   }
